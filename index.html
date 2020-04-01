@@ -14,14 +14,14 @@
     <h1>Users</h1>
     <div id="users"></div>
 <script>
-    var getUser=document.getElementById('button1')
+    const getUser=document.getElementById('button1')
     getUser.addEventListener('click', loadUser);
-    var getUsers=document.getElementById('button2')
+    const getUsers=document.getElementById('button2')
     getUsers.addEventListener('click', loadUsers);
 
     function loadUsers(){
         console.log('abc')
-        var xhr = new XMLHttpRequest();
+        const xhr = new XMLHttpRequest();
         xhr.open ('GET', 'users.json', true);
         xhr.onload = function (){
             if(this.status===200){
@@ -41,7 +41,7 @@
     }
 
     function loadUser(){
-        var xhr = new XMLHttpRequest();
+       const xhr = new XMLHttpRequest();
         xhr.open ('GET', 'user.json', true);
         xhr.onload = function (){
             if(this.status===200){
